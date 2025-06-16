@@ -1,2 +1,19 @@
-Please add your pseudocode to this file
-And a written explanation of your solution
+Pseudocode:
+1. Initialize empty result array
+2. FOR each starting position i from 0 to string length - 1:
+   a. FOR each ending position j from i + 1 to string length:
+      - Extract substring from position i to j (exclusive)
+      - Add substring to result array
+3. Return result array
+
+Generates all possible consecutive substrings of a given string.
+  
+Description: This function uses a nested loop approach to extract every possible contiguous substring from the input string. The outer loop iterates through each starting position, while the inner loop iterates through each possible ending position for substrings beginning at that start position. Each substring is extracted using the slice() method and added to the result array.
+
+ Time Complexity: O(n³)
+- The nested loops create O(n²) iterations
+- Each slice() operation takes O(n) time in the worst case
+- Total: O(n²) × O(n) = O(n³)
+
+Space Complexity: O(n³) for storing all substrings
+
